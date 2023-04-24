@@ -15,7 +15,7 @@ if use_pooling:
     conn_params = connection().get_connection_params()
     pool = SimpleConnectionPool(
         minconn=1,
-        maxconn=10,
+        maxconn=50,
         **conn_params
     )
 
@@ -30,7 +30,7 @@ def release_pooling(conn):
 # Normal Insert
 
 
-def execute_insert(query, params=None, fetchone=True):
+def execute_insert(query, params=None, return_id=True, cur=None):
     # Connect to the database
     if use_pooling:
         conn = connection_pooling()
@@ -40,7 +40,12 @@ def execute_insert(query, params=None, fetchone=True):
         logger.debug("🗄️✏️ Database connection opened")
 
     # Create a cursor
-    cur = conn.cursor()
+    if not cur:
+        cur = conn.cursor()
+        close_cursor = True
+    else:
+        close_cursor = False
+
     try:
         # Execute the query
         cur.execute(query, params)
@@ -49,19 +54,21 @@ def execute_insert(query, params=None, fetchone=True):
 
         # Fetch the results if requested
         result = None
-        if fetchone:
-            result = cur.fetchone() or () # return an empty tuple if None is returned
+        if return_id:
+            result = cur.fetchone() or ()  # return an empty tuple if None is returned
         else:
-            result = cur.fetchall() or [] # return an empty list if None is returned
-            logger.debug(f'🗄️✏️ Fetched results: {result}')
+            result = cur.rowcount
+            logger.debug(f'🗄️✏️ Rows affected: {result}')
     except Exception as e:
         logger.error(f"🗄️✏️ Error executing insert query: {e}\n{traceback.format_exc()}")
         logger.error(f"🗄️✏️ Failed query: {query}")
         logger.error(f"🗄️✏️ Failed query parameters: {params}")
+        time.sleep(5)
         result = None
 
     # Close the cursor and connection
-    cur.close()
+    if close_cursor:
+        cur.close()
     if use_pooling:
         release_pooling(conn)
     else:
@@ -69,6 +76,8 @@ def execute_insert(query, params=None, fetchone=True):
         logger.debug("🗄️✏️ Cursor and connection closed")
 
     return result
+
+
 
 # # # # # # # # # #
 
@@ -111,219 +120,52 @@ def execute_bulk_insert(query, params_list):
 # Queries
 
 
-
-
-
-
-
-
-# Add Tech Apps
-def record_tech_apps(name, description, icon, saas, website, pricing, scriptsrc, headers, cookies, dom, implies, cat_implies, js, requires, requires_cat, meta, cats):
-    logger.debug(f'🗄️✏️ Adding {name} to Tech Apps ')
+def insert_scan(engine_name, orientation_angle, orientation_type, user_agent, window_height, window_width, scanned_at, url_id, url):
     query = """
-        INSERT INTO ref.tech_apps (
-            name,
-            description,
-            icon,
-            saas,
-            website,
-            pricing,
-            scriptsrc,
-            headers,
-            cookies,
-            dom,
-            implies,
-            cat_implies,
-            js,
-            requires,
-            requires_cat,
-            meta,
-            cats
-        )
-        VALUES ( %s, %s, %s, %s,
-                %s, %s, %s, %s,
-                %s, %s, %s, %s,
-                %s, %s, %s, %s, %s)
-        ON CONFLICT (name) DO UPDATE
-        SET description = excluded.description,
-            icon = excluded.icon,
-            saas = excluded.saas,
-            website = excluded.website,
-            pricing = excluded.pricing,
-            scriptsrc = excluded.scriptsrc,
-            headers = excluded.headers,
-            cookies = excluded.cookies,
-            dom = excluded.dom,
-            implies = excluded.implies,
-            cat_implies = excluded.cat_implies,
-            js = excluded.js,
-            requires = excluded.requires,
-            requires_cat = excluded.requires_cat,
-            meta = excluded.meta,
-            cats = excluded.cats
-        RETURNING id;
+        INSERT INTO axe.scan_data (
+            engine_name, orientation_angle, orientation_type,
+            user_agent, window_height, window_width,
+            scanned_at, url_id, url
+        ) VALUES (
+            %s, %s, %s, %s, %s, %s, %s, %s, %s
+        ) RETURNING id;
     """
-    try:
-        execute_insert(query, (name, description, icon, saas, website, pricing, scriptsrc, headers, cookies, dom, implies, cat_implies, js, requires, requires_cat, meta, cats))
-        # Log Success
-        logger.debug(f'🗄️  ✏️UPDATED: {name}')
-        return True
-    except Exception as e:
-        logger.error(f'🗄️  ✏️Failed to complete update: {name} - Error: {e}')  # Display the error message
-        return False
 
-def scan_axe_new_event(url_id, scanned_at, failure, axe_meta):
-    logger.debug(f'Creating new scan event for {url_id}...')
-    query = """
-        INSERT INTO events.scans_axe (
-            url_id,
-            scanned_at,
-            failure,
-            axe_meta
-        )
-        VALUES (
-            %s, %s, %s, %s
-        )
-        RETURNING id as scan_event_id;
-    """
-    try:
-        result = execute_insert(query, (url_id, scanned_at, failure, axe_meta))
-        # Log the Yay!
-        scan_event_id = result[0]
-        logger.debug(f'🗄️  ✏️UPDATED: {url_id}')
-        return scan_event_id
-    except Exception as e:
-        logger.error(f'🗄️  ✏️Failed to complete update: {url_id} - Error: {e}')
-    # Display the error message
-    return False
+    params = (
+        engine_name, orientation_angle, orientation_type,
+        user_agent, window_height, window_width,
+        scanned_at, url_id, url
+    )
 
-# Add Axe Results
-# Add Items
-def insert_axe_items(scan_event_id, url_id, type, area, impact, tags):
-    logger.debug(f'Insert: Beginning to add items...')
-    query = """
-        INSERT INTO results.axe_items (
-            scan_event_id,
-            url_id,
-            type,
-            area,
-            impact,
-            tags
-        )
-        VALUES (
-            %s, %s, %s,
-            %s, %s, %s::text[]
-        );
-    """
-    rows_affected = execute_bulk_insert(query, [(scan_event_id, url_id, type, area, impact, tags)])
-    if rows_affected == 1:
-        logger.debug(f'Insert: 🟢 New Item Added...')
-        return True
-    else:
-        logger.error(f'Insert: Problem adding item. Values: scan_event_id={scan_event_id}, url_id={url_id}, type={type}, area={area}, impact={impact}, tags={tags}')
+    scan_id = execute_insert(query, params)
+    if not scan_id:
+        raise ValueError("Error inserting scan data")
+
+    return scan_id[0]
+
+
+def insert_tables_rules(scan_id, tables_rules):
+    with connection_pooling() as conn:
+        cur = conn.cursor()
+        for rule in tables_rules:
+            query = """
+                INSERT INTO axe.rules (
+                    scan_id, rule_type, axe_id, impact, tags, nodes
+                ) VALUES (%s, %s, %s, %s, %s, %s);
+            """
+
+            # Convert the tags string to a JSON array
+            tags_json = json.dumps(rule['tags'].split(','))
+
+            params = (
+                scan_id,
+                rule['rule_type'],
+                rule['axe_id'],
+                rule['impact'],
+                tags_json,
+                rule.get('nodes', None)
+            )
+
+            execute_insert(query, params, return_id=False, cur=cur)
+        conn.commit()
         time.sleep(5)
-        return False
-
-
-# Add Nodes
-def insert_axe_nodes(scan_event_id, url_id, html, impact, target, data, failure_summary):
-    logger.debug(f'Insert: Beginning to add nodes...')
-    query = """
-        INSERT INTO results.axe_nodes (
-            scan_event_id,
-            url_id,
-            html,
-            impact,
-            target,
-            data,
-            failure_summary
-        )
-        VALUES (
-            %s, %s, %s, %s,
-            %s, %s, %s
-        );
-    """
-    rows_affected = execute_bulk_insert(query, [(scan_event_id, url_id, html, impact, target, data, failure_summary)])
-    if rows_affected == 1:
-        logger.debug(f'Insert: 🟢 New Node Added...')
-    else:
-        logger.error(f'Insert: Problem adding node. Values: scan_event_id={scan_event_id}, url_id={url_id}, html={html}, impact={impact}, target={target}, data={data}, failure_summary={failure_summary}')
-        time.sleep(5)
-
-
-# Add Subnodes
-def insert_axe_subnodes(scan_event_id, url_id, data, node_id, impact, message, node_type, related_nodes):
-    logger.debug(f'Insert: Beginning to add subnodes...')
-    query = """
-        INSERT INTO results.axe_subnodes (
-            scan_event_id,
-            url_id,
-            node_id,
-            data,
-            impact,
-            node_type,
-            message,
-            related_nodes
-        )
-        VALUES (
-            %s, %s, %s, %s,
-            %s, %s, %s, %s
-        );
-    """
-    related_nodes_json = json.dumps(related_nodes)
-    rows_affected = execute_bulk_insert(query, [(scan_event_id, url_id, node_id, data, impact, node_type, message, related_nodes_json)])
-    if rows_affected == 1:
-        logger.debug(f'Insert: 🟢 New Subnode Added...')
-    else:
-        logger.error(f'Insert: Problem adding subnode. Values: scan_event_id={scan_event_id}, url_id={url_id}, node_id={node_id}, data={data}, impact={impact}, node_type={node_type}, message={message}, related_nodes={related_nodes}')
-        time.sleep(5)
-
-
-def add_tech_results(url_id, tech_apps):
-    logger.debug('🗄️   ✏️ Adding Tech Results')
-    query = """
-        INSERT INTO results.tech_checks (
-            url_id,
-            techs
-        )
-        VALUES (
-            %s, %s
-        )
-        RETURNING url_id;
-    """
-    try:
-        execute_insert(query, (url_id, json.dumps(tech_apps)))
-        logger.debug(f'🗄️   ✏️ UPDATED: {url_id}')
-        return True
-    except Exception as e:  # Add 'Exception as e' to capture the exception details
-        logger.error(f'🗄️   ✏️ Failed to complete update: {url_id} - Error: {e}')  # Display the error message
-        return False
-
-# Axe Subnodes Bulk Insert
-def insert_axe_subnodes_bulk(data):
-    logger.debug(f'Insert: Beginning to add subnodes in bulk...')
-    query = """
-        INSERT INTO results.axe_subnodes (
-            scan_event_id,
-            url_id,
-            node_id,
-            data,
-            impact,
-            node_type,
-            message,
-            related_nodes
-        )
-        VALUES (
-            %s, %s, %s, %s,
-            %s, %s, %s, %s
-        );
-    """
-
-    rows_affected = execute_bulk_insert(query, data)
-    if rows_affected == len(data):
-        logger.debug(f'Insert: 🟢 Subnodes added in bulk...')
-        return True
-    else:
-        logger.error(f'Insert: Problem adding subnodes in bulk. Values: {data}')
-        time.sleep(5)
-        return False

@@ -1,9 +1,13 @@
 import os
 import threading
+import json
+import time
 from flask import Flask, jsonify, Response
 from utils.auth import catch_rabbits
 from utils.watch import logger
 from prometheus_client import Counter, Histogram, generate_latest
+from utils.process import process_message, insert_tables_rules
+
 
 
 app = Flask(__name__)
@@ -12,28 +16,27 @@ app = Flask(__name__)
 stop_consumer = threading.Event()
 
 
+def rabbitmq_consumer_callback(ch, method, properties, body):
+    logger.debug('Received message from RabbitMQ')
+
+    # Process the message
+    process_message(body)
+
+    # Acknowledge the message
+    ch.basic_ack(delivery_tag=method.delivery_tag)
+
+
 def rabbitmq_consumer():
-    def callback(ch, method, properties, body):
-        # Process the message
-        logger.debug(f"Received message: {body}")
-
-        # Acknowledge the message
-        ch.basic_ack(delivery_tag=method.delivery_tag)
-
-    while not stop_consumer.is_set():
-        try:
-            catch_rabbits("your_queue_name", callback)
-        except KeyboardInterrupt:
-            break
-        except Exception as e:
-            logger.error(f"Error in the RabbitMQ consumer: {e}")
+    queue_name = 'sharp_axes'  # Replace with your actual queue name
+    logger.debug('Starting RabbitMQ consumer thread')
+    catch_rabbits(queue_name, rabbitmq_consumer_callback)
 
 
 # Thread to run the RabbitMQ consumer
 consumer_thread = threading.Thread(target=rabbitmq_consumer, daemon=True)
 
 
-@app.route('/start')
+@app.route('/start', methods=['POST'])
 def start():
     logger.debug('Waking up...')
     if not consumer_thread.is_alive():
@@ -42,7 +45,7 @@ def start():
     return jsonify({'message': 'Started listening to the RabbitMQ queue'})
 
 
-@app.route('/stop')
+@app.route('/stop', methods=['POST'])
 def stop():
     logger.info('Stop request received...')
     stop_consumer.set()
@@ -82,5 +85,4 @@ def metrics():
 if __name__ == '__main__':
     # Get the port number from the environment variable or use 8083 as default
     app_port = int(os.environ.get('APP_PORT', 8084))
-    standby()
     app.run(debug=True, host='0.0.0.0', port=app_port)
