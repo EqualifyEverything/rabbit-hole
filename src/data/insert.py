@@ -173,4 +173,4 @@ def insert_tables_rules(scan_id, tables_rules):
     return rows_affected
 
 
-def insert_uppies():
+# def insert_uppies():

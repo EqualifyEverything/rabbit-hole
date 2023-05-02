@@ -56,7 +56,7 @@ def standby():
 
 @app.route('/health')
 def health_check():
-    return jsonify({'status': 'UP'}), 200
+    return jsonify({'status': 'ok'}), 200
 
 
 @app.route('/status')
