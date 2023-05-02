@@ -145,27 +145,32 @@ def insert_scan(engine_name, orientation_angle, orientation_type, user_agent, wi
 
 
 def insert_tables_rules(scan_id, tables_rules):
-    with connection_pooling() as conn:
-        cur = conn.cursor()
-        for rule in tables_rules:
-            query = """
-                INSERT INTO axe.rules (
-                    scan_id, rule_type, axe_id, impact, tags, nodes
-                ) VALUES (%s, %s, %s, %s, %s, %s);
-            """
+    query = """
+        INSERT INTO axe.rules (
+            scan_id, rule_type, axe_id, impact, tags, nodes
+        ) VALUES (%s, %s, %s, %s, %s, %s);
+    """
 
-            # Convert the tags string to a JSON array
-            tags_json = json.dumps(rule['tags'].split(','))
+    # Prepare the data for bulk insert
+    params_list = []
+    for rule in tables_rules:
+        # Convert the tags string to a JSON array
+        tags_json = json.dumps(rule['tags'].split(','))
 
-            params = (
-                scan_id,
-                rule['rule_type'],
-                rule['axe_id'],
-                rule['impact'],
-                tags_json,
-                rule.get('nodes', None)
-            )
+        params = (
+            scan_id,
+            rule['rule_type'],
+            rule['axe_id'],
+            rule['impact'],
+            tags_json,
+            rule.get('nodes', None)
+        )
+        params_list.append(params)
 
-            execute_insert(query, params, return_id=False, cur=cur)
-        conn.commit()
-        time.sleep(5)
+    # Perform the bulk insert
+    rows_affected = execute_bulk_insert(query, params_list)
+    logger.debug(f'Rules Inserted: {rows_affected}')
+    return rows_affected
+
+
+def insert_uppies():

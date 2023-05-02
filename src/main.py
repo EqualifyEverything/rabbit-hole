@@ -1,13 +1,10 @@
 import os
 import threading
-import json
-import time
 from flask import Flask, jsonify, Response
 from utils.auth import catch_rabbits
 from utils.watch import logger
 from prometheus_client import Counter, Histogram, generate_latest
-from utils.process import process_message, insert_tables_rules
-
+from utils.process import process_message
 
 
 app = Flask(__name__)
@@ -27,7 +24,7 @@ def rabbitmq_consumer_callback(ch, method, properties, body):
 
 
 def rabbitmq_consumer():
-    queue_name = 'sharp_axes'  # Replace with your actual queue name
+    queue_name = 'landing_axe'
     logger.debug('Starting RabbitMQ consumer thread')
     catch_rabbits(queue_name, rabbitmq_consumer_callback)
 

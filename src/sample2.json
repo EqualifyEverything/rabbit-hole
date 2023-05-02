@@ -1,0 +1,674 @@
+{
+    "tables_scans": {
+        "engine_name": "Axe",
+        "orientation_angle": null,
+        "orientation_type": "landscape-primary",
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/112.0.5615.137 Safari/537.36",
+        "window_height": 600,
+        "window_width": 800,
+        "scanned_at": "2023-04-24T18:46:54.441Z",
+        "url_id": 135601,
+        "url": "https://sec.gov/Archives/edgar/data/93751/000009375108000078/0000093751-08-000078-index-headers.html"
+    },
+    "tables_rules": [
+        {
+            "rule_type": "violations",
+            "axe_id": "html-has-lang",
+            "impact": "serious",
+            "tags": "cat.language,wcag2a,wcag311",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": null, \"id\": \"has-lang\", \"impact\": \"serious\", \"message\": \"The <html> element does not have a lang attribute\", \"relatedNodes\": []}], \"failureSummary\": \"Fix any of the following:\\n  The <html> element does not have a lang attribute\", \"html\": \"<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\", \"impact\": \"serious\", \"none\": [], \"target\": [\"html\"]}]"
+        },
+        {
+            "rule_type": "violations",
+            "axe_id": "landmark-one-main",
+            "impact": "moderate",
+            "tags": "cat.semantics,best-practice",
+            "nodes": "[{\"all\": [{\"data\": null, \"id\": \"page-has-main\", \"impact\": \"moderate\", \"message\": \"Page does not have a main landmark\", \"relatedNodes\": []}], \"any\": [], \"failureSummary\": \"Fix all of the following:\\n  Page does not have a main landmark\", \"html\": \"<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\", \"impact\": \"moderate\", \"none\": [], \"target\": [\"html\"]}]"
+        },
+        {
+            "rule_type": "violations",
+            "axe_id": "region",
+            "impact": "moderate",
+            "tags": "cat.keyboard,best-practice",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": null, \"id\": \"region\", \"impact\": \"moderate\", \"message\": \"Some page content is not contained by landmarks\", \"relatedNodes\": [{\"html\": \"<div id=\\\"header\\\">U.S. Securities and Exchange Commission</div>\", \"target\": [\"#header\"]}, {\"html\": \"<h1>Your Request Originates from an Undeclared Automated Tool</h1>\", \"target\": [\"h1\"]}, {\"html\": \"<p>\", \"target\": [\"p:nth-child(2)\"]}, {\"html\": \"<p>Please declare your traffic by updating your user agent to include company specific information.</p>\", \"target\": [\"#content > p:nth-child(3)\"]}, {\"html\": \"<p>\", \"target\": [\"#content > p:nth-child(4)\"]}, {\"html\": \"<p>For more information, please see the SEC\\u2019s <a href=\\\"#internet\\\">Web Site Privacy and Security Policy</a>. Thank you for your interest in the U.S. Securities and Exchange Commission.\\n</p>\", \"target\": [\"#content > p:nth-child(5)\"]}, {\"html\": \"<p>Reference ID: 0.354fde17.1682362014.25ebb4ab</p>\", \"target\": [\"#content > p:nth-child(6)\"]}, {\"html\": \"<h2>More Information</h2>\", \"target\": [\"h2\"]}, {\"html\": \"<a name=\\\"internet\\\">Internet Security Policy</a>\", \"target\": [\"a[name=\\\"internet\\\"]\"]}, {\"html\": \"<p>\", \"target\": [\".grey_box > p:nth-child(3)\"]}, {\"html\": \"<p>\", \"target\": [\".grey_box > p:nth-child(4)\"]}, {\"html\": \"<p>\", \"target\": [\".grey_box > p:nth-child(5)\"]}, {\"html\": \"<p>\", \"target\": [\".grey_box > p:nth-child(6)\"]}, {\"html\": \"<p>Note that this policy may change as the SEC manages SEC.gov to ensure that the website performs efficiently and remains available to all users.</p>\", \"target\": [\"p:nth-child(7)\"]}, {\"html\": \"<p class=\\\"note\\\"><b>Note:</b> We do not offer technical support for developing or debugging scripted downloading processes.</p>\", \"target\": [\".note\"]}]}], \"failureSummary\": \"Fix any of the following:\\n  Some page content is not contained by landmarks\", \"html\": \"<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\", \"impact\": \"moderate\", \"none\": [], \"target\": [\"html\"]}]"
+        },
+        {
+            "rule_type": "incomplete",
+            "axe_id": "color-contrast",
+            "impact": "serious",
+            "tags": "cat.color,wcag2aa,wcag143",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"3:1\", \"fgColor\": \"#000000\", \"fontSize\": \"15.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}], \"html\": \"<h1>Your Request Originates from an Undeclared Automated Tool</h1>\", \"impact\": \"serious\", \"none\": [], \"target\": [\"h1\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}], \"html\": \"<p>\", \"impact\": \"serious\", \"none\": [], \"target\": [\"p:nth-child(2)\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}], \"html\": \"<p>Please declare your traffic by updating your user agent to include company specific information.</p>\", \"impact\": \"serious\", \"none\": [], \"target\": [\"#content > p:nth-child(3)\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}], \"html\": \"<p>\", \"impact\": \"serious\", \"none\": [], \"target\": [\"#content > p:nth-child(4)\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#0000ee\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}], \"html\": \"<a href=\\\"https://www.sec.gov/developer\\\" target=\\\"_blank\\\">sec.gov/developer</a>\", \"impact\": \"serious\", \"none\": [], \"target\": [\"a[href$=\\\"developer\\\"]\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#0000ee\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}], \"html\": \"<a href=\\\"https://public.govdelivery.com/accounts/USSEC/subscriber/new?topic_id=USSEC_260\\\" target=\\\"_blank\\\">sign up for email updates</a>\", \"impact\": \"serious\", \"none\": [], \"target\": [\"a[target=\\\"_blank\\\"]:nth-child(2)\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#0000ee\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}], \"html\": \"<a href=\\\"mailto:opendata@sec.gov\\\">opendata@sec.gov</a>\", \"impact\": \"serious\", \"none\": [], \"target\": [\"a[href$=\\\"mailto:opendata@sec.gov\\\"]\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}], \"html\": \"<p>For more information, please see the SEC\\u2019s <a href=\\\"#internet\\\">Web Site Privacy and Security Policy</a>. Thank you for your interest in the U.S. Securities and Exchange Commission.\\n</p>\", \"impact\": \"serious\", \"none\": [], \"target\": [\"#content > p:nth-child(5)\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#0000ee\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}], \"html\": \"<a href=\\\"#internet\\\">Web Site Privacy and Security Policy</a>\", \"impact\": \"serious\", \"none\": [], \"target\": [\"a[href$=\\\"#internet\\\"]\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}], \"html\": \"<p>Reference ID: 0.354fde17.1682362014.25ebb4ab</p>\", \"impact\": \"serious\", \"none\": [], \"target\": [\"#content > p:nth-child(6)\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}], \"html\": \"<p class=\\\"note\\\"><b>Note:</b> We do not offer technical support for developing or debugging scripted downloading processes.</p>\", \"impact\": \"serious\", \"none\": [], \"target\": [\".note\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}], \"html\": \"<b>Note:</b>\", \"impact\": \"serious\", \"none\": [], \"target\": [\"b\"]}]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "accesskeys",
+            "impact": null,
+            "tags": "best-practice,cat.keyboard",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "area-alt",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag111,section508,section508.22.a",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "aria-allowed-attr",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag412",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "aria-allowed-role",
+            "impact": null,
+            "tags": "cat.aria,best-practice",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "aria-dpub-role-fallback",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag131",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "aria-required-attr",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag412",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "aria-required-children",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag131",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "aria-required-parent",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag131",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "aria-roles",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag412",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "aria-valid-attr-value",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag412",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "aria-valid-attr",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag412",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "autocomplete-valid",
+            "impact": null,
+            "tags": "cat.forms,wcag21aa,wcag135",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "blink",
+            "impact": null,
+            "tags": "cat.time-and-media,wcag2a,wcag222,section508,section508.22.j",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "button-name",
+            "impact": null,
+            "tags": "cat.name-role-value,wcag2a,wcag412,section508,section508.22.a",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "checkboxgroup",
+            "impact": null,
+            "tags": "cat.forms,best-practice",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "definition-list",
+            "impact": null,
+            "tags": "cat.structure,wcag2a,wcag131",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "dlitem",
+            "impact": null,
+            "tags": "cat.structure,wcag2a,wcag131",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "duplicate-id-active",
+            "impact": null,
+            "tags": "cat.parsing,wcag2a,wcag411",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "duplicate-id-aria",
+            "impact": null,
+            "tags": "cat.parsing,wcag2a,wcag411",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "frame-tested",
+            "impact": null,
+            "tags": "cat.structure,review-item",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "frame-title-unique",
+            "impact": null,
+            "tags": "cat.text-alternatives,best-practice",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "frame-title",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag241,wcag412,section508,section508.22.i",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "html-lang-valid",
+            "impact": null,
+            "tags": "cat.language,wcag2a,wcag311",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "html-xml-lang-mismatch",
+            "impact": null,
+            "tags": "cat.language,wcag2a,wcag311",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "image-alt",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag111,section508,section508.22.a",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "input-image-alt",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag111,section508,section508.22.a",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "label-title-only",
+            "impact": null,
+            "tags": "cat.forms,best-practice",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "label",
+            "impact": null,
+            "tags": "cat.forms,wcag2a,wcag332,wcag131,section508,section508.22.n",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "landmark-banner-is-top-level",
+            "impact": null,
+            "tags": "cat.semantics,best-practice",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "landmark-contentinfo-is-top-level",
+            "impact": null,
+            "tags": "cat.semantics,best-practice",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "landmark-main-is-top-level",
+            "impact": null,
+            "tags": "cat.semantics,best-practice",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "layout-table",
+            "impact": null,
+            "tags": "cat.semantics,wcag2a,wcag131",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "list",
+            "impact": null,
+            "tags": "cat.structure,wcag2a,wcag131",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "listitem",
+            "impact": null,
+            "tags": "cat.structure,wcag2a,wcag131",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "marquee",
+            "impact": null,
+            "tags": "cat.parsing,wcag2a,wcag222",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "meta-refresh",
+            "impact": null,
+            "tags": "cat.time,wcag2a,wcag2aaa,wcag221,wcag224,wcag325",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "meta-viewport-large",
+            "impact": null,
+            "tags": "cat.sensory-and-visual-cues,best-practice",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "meta-viewport",
+            "impact": null,
+            "tags": "cat.sensory-and-visual-cues,wcag2aa,wcag144",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "object-alt",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag111,section508,section508.22.a",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "radiogroup",
+            "impact": null,
+            "tags": "cat.forms,best-practice",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "scope-attr-valid",
+            "impact": null,
+            "tags": "cat.tables,best-practice",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "server-side-image-map",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag211,section508,section508.22.f",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "tabindex",
+            "impact": null,
+            "tags": "cat.keyboard,best-practice",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "table-duplicate-name",
+            "impact": null,
+            "tags": "cat.tables,best-practice",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "td-headers-attr",
+            "impact": null,
+            "tags": "cat.tables,wcag2a,wcag131,section508,section508.22.g",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "th-has-data-cells",
+            "impact": null,
+            "tags": "cat.tables,wcag2a,wcag131,section508,section508.22.g",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "valid-lang",
+            "impact": null,
+            "tags": "cat.language,wcag2aa,wcag312",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "video-caption",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag122,section508,section508.22.a",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "video-description",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2aa,wcag125,section508,section508.22.b",
+            "nodes": "[]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "aria-hidden-body",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag412",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": null, \"id\": \"aria-hidden-body\", \"impact\": \"critical\", \"message\": \"No aria-hidden attribute is present on document body\", \"relatedNodes\": []}], \"html\": \"<body>\", \"impact\": null, \"none\": [], \"target\": [\"body\"]}]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "bypass",
+            "impact": null,
+            "tags": "cat.keyboard,wcag2a,wcag241,section508,section508.22.o",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": null, \"id\": \"internal-link-present\", \"impact\": \"serious\", \"message\": \"Valid skip link found\", \"relatedNodes\": []}, {\"data\": null, \"id\": \"header-present\", \"impact\": \"serious\", \"message\": \"Page has a header\", \"relatedNodes\": []}], \"html\": \"<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\", \"impact\": null, \"none\": [], \"target\": [\"html\"]}]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "color-contrast",
+            "impact": "serious",
+            "tags": "cat.color,wcag2aa,wcag143",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": {\"bgColor\": \"#003968\", \"contrastRatio\": 11.76, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#ffffff\", \"fontSize\": \"15.0pt\", \"fontWeight\": \"normal\", \"missingData\": null}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element has sufficient color contrast of 11.76\", \"relatedNodes\": []}], \"html\": \"<div id=\\\"header\\\">U.S. Securities and Exchange Commission</div>\", \"impact\": null, \"none\": [], \"target\": [\"#header\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": \"#eeeeee\", \"contrastRatio\": 18.09, \"expectedContrastRatio\": \"3:1\", \"fgColor\": \"#000000\", \"fontSize\": \"15.0pt\", \"fontWeight\": \"bold\", \"missingData\": null}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element has sufficient color contrast of 18.09\", \"relatedNodes\": []}], \"html\": \"<h2>More Information</h2>\", \"impact\": null, \"none\": [], \"target\": [\"h2\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": \"#eeeeee\", \"contrastRatio\": 18.09, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": null}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element has sufficient color contrast of 18.09\", \"relatedNodes\": []}], \"html\": \"<a name=\\\"internet\\\">Internet Security Policy</a>\", \"impact\": null, \"none\": [], \"target\": [\"a[name=\\\"internet\\\"]\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": \"#eeeeee\", \"contrastRatio\": 18.09, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"9.0pt\", \"fontWeight\": \"normal\", \"missingData\": null}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element has sufficient color contrast of 18.09\", \"relatedNodes\": []}], \"html\": \"<p>\", \"impact\": null, \"none\": [], \"target\": [\".grey_box > p:nth-child(3)\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": \"#eeeeee\", \"contrastRatio\": 18.09, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"9.0pt\", \"fontWeight\": \"normal\", \"missingData\": null}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element has sufficient color contrast of 18.09\", \"relatedNodes\": []}], \"html\": \"<p>\", \"impact\": null, \"none\": [], \"target\": [\".grey_box > p:nth-child(4)\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": \"#eeeeee\", \"contrastRatio\": 18.09, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"9.0pt\", \"fontWeight\": \"normal\", \"missingData\": null}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element has sufficient color contrast of 18.09\", \"relatedNodes\": []}], \"html\": \"<p>\", \"impact\": null, \"none\": [], \"target\": [\".grey_box > p:nth-child(5)\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": \"#eeeeee\", \"contrastRatio\": 18.09, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"9.0pt\", \"fontWeight\": \"normal\", \"missingData\": null}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element has sufficient color contrast of 18.09\", \"relatedNodes\": []}], \"html\": \"<p>\", \"impact\": null, \"none\": [], \"target\": [\".grey_box > p:nth-child(6)\"]}, {\"all\": [], \"any\": [{\"data\": {\"bgColor\": \"#eeeeee\", \"contrastRatio\": 18.09, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"9.0pt\", \"fontWeight\": \"normal\", \"missingData\": null}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element has sufficient color contrast of 18.09\", \"relatedNodes\": []}], \"html\": \"<p>Note that this policy may change as the SEC manages SEC.gov to ensure that the website performs efficiently and remains available to all users.</p>\", \"impact\": null, \"none\": [], \"target\": [\"p:nth-child(7)\"]}]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "document-title",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag242",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": null, \"id\": \"doc-has-title\", \"impact\": \"serious\", \"message\": \"Document has a non-empty <title> element\", \"relatedNodes\": []}], \"html\": \"<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\", \"impact\": null, \"none\": [], \"target\": [\"html\"]}]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "duplicate-id",
+            "impact": null,
+            "tags": "cat.parsing,wcag2a,wcag411",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": \"header\", \"id\": \"duplicate-id\", \"impact\": \"minor\", \"message\": \"Document has no static elements that share the same id attribute\", \"relatedNodes\": []}], \"html\": \"<div id=\\\"header\\\">U.S. Securities and Exchange Commission</div>\", \"impact\": null, \"none\": [], \"target\": [\"#header\"]}, {\"all\": [], \"any\": [{\"data\": \"content\", \"id\": \"duplicate-id\", \"impact\": \"minor\", \"message\": \"Document has no static elements that share the same id attribute\", \"relatedNodes\": []}], \"html\": \"<div id=\\\"content\\\">\", \"impact\": null, \"none\": [], \"target\": [\"#content\"]}]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "empty-heading",
+            "impact": null,
+            "tags": "cat.name-role-value,best-practice",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": null, \"id\": \"has-visible-text\", \"impact\": \"minor\", \"message\": \"Element has text that is visible to screen readers\", \"relatedNodes\": []}], \"html\": \"<h1>Your Request Originates from an Undeclared Automated Tool</h1>\", \"impact\": null, \"none\": [], \"target\": [\"h1\"]}, {\"all\": [], \"any\": [{\"data\": null, \"id\": \"has-visible-text\", \"impact\": \"minor\", \"message\": \"Element has text that is visible to screen readers\", \"relatedNodes\": []}], \"html\": \"<h2>More Information</h2>\", \"impact\": null, \"none\": [], \"target\": [\"h2\"]}, {\"all\": [], \"any\": [{\"data\": null, \"id\": \"has-visible-text\", \"impact\": \"minor\", \"message\": \"Element has text that is visible to screen readers\", \"relatedNodes\": []}], \"html\": \"<h3><a name=\\\"internet\\\">Internet Security Policy</a></h3>\", \"impact\": null, \"none\": [], \"target\": [\"h3\"]}]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "heading-order",
+            "impact": null,
+            "tags": "cat.semantics,best-practice",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": 1, \"id\": \"heading-order\", \"impact\": \"moderate\", \"message\": \"Heading order valid\", \"relatedNodes\": []}], \"html\": \"<h1>Your Request Originates from an Undeclared Automated Tool</h1>\", \"impact\": null, \"none\": [], \"target\": [\"h1\"]}, {\"all\": [], \"any\": [{\"data\": 2, \"id\": \"heading-order\", \"impact\": \"moderate\", \"message\": \"Heading order valid\", \"relatedNodes\": []}], \"html\": \"<h2>More Information</h2>\", \"impact\": null, \"none\": [], \"target\": [\"h2\"]}, {\"all\": [], \"any\": [{\"data\": 3, \"id\": \"heading-order\", \"impact\": \"moderate\", \"message\": \"Heading order valid\", \"relatedNodes\": []}], \"html\": \"<h3><a name=\\\"internet\\\">Internet Security Policy</a></h3>\", \"impact\": null, \"none\": [], \"target\": [\"h3\"]}]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "image-redundant-alt",
+            "impact": null,
+            "tags": "cat.text-alternatives,best-practice",
+            "nodes": "[{\"all\": [], \"any\": [], \"html\": \"<p>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\"p:nth-child(2)\"]}, {\"all\": [], \"any\": [], \"html\": \"<p>Please declare your traffic by updating your user agent to include company specific information.</p>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\"#content > p:nth-child(3)\"]}, {\"all\": [], \"any\": [], \"html\": \"<p>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\"#content > p:nth-child(4)\"]}, {\"all\": [], \"any\": [], \"html\": \"<a href=\\\"https://www.sec.gov/developer\\\" target=\\\"_blank\\\">sec.gov/developer</a>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\"a[href$=\\\"developer\\\"]\"]}, {\"all\": [], \"any\": [], \"html\": \"<a href=\\\"https://public.govdelivery.com/accounts/USSEC/subscriber/new?topic_id=USSEC_260\\\" target=\\\"_blank\\\">sign up for email updates</a>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\"a[target=\\\"_blank\\\"]:nth-child(2)\"]}, {\"all\": [], \"any\": [], \"html\": \"<a href=\\\"mailto:opendata@sec.gov\\\">opendata@sec.gov</a>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\"a[href$=\\\"mailto:opendata@sec.gov\\\"]\"]}, {\"all\": [], \"any\": [], \"html\": \"<p>For more information, please see the SEC\\u2019s <a href=\\\"#internet\\\">Web Site Privacy and Security Policy</a>. Thank you for your interest in the U.S. Securities and Exchange Commission.\\n</p>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\"#content > p:nth-child(5)\"]}, {\"all\": [], \"any\": [], \"html\": \"<a href=\\\"#internet\\\">Web Site Privacy and Security Policy</a>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\"a[href$=\\\"#internet\\\"]\"]}, {\"all\": [], \"any\": [], \"html\": \"<p>Reference ID: 0.354fde17.1682362014.25ebb4ab</p>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\"#content > p:nth-child(6)\"]}, {\"all\": [], \"any\": [], \"html\": \"<p>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\".grey_box > p:nth-child(3)\"]}, {\"all\": [], \"any\": [], \"html\": \"<p>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\".grey_box > p:nth-child(4)\"]}, {\"all\": [], \"any\": [], \"html\": \"<p>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\".grey_box > p:nth-child(5)\"]}, {\"all\": [], \"any\": [], \"html\": \"<p>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\".grey_box > p:nth-child(6)\"]}, {\"all\": [], \"any\": [], \"html\": \"<p>Note that this policy may change as the SEC manages SEC.gov to ensure that the website performs efficiently and remains available to all users.</p>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\"p:nth-child(7)\"]}, {\"all\": [], \"any\": [], \"html\": \"<p class=\\\"note\\\"><b>Note:</b> We do not offer technical support for developing or debugging scripted downloading processes.</p>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"duplicate-img-label\", \"impact\": \"minor\", \"message\": \"Element does not duplicate existing text in <img> alt text\", \"relatedNodes\": []}], \"target\": [\".note\"]}]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "landmark-no-duplicate-banner",
+            "impact": null,
+            "tags": "cat.semantics,best-practice",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": null, \"id\": \"page-no-duplicate-banner\", \"impact\": \"moderate\", \"message\": \"Document has no more than one banner landmark\", \"relatedNodes\": []}], \"html\": \"<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\", \"impact\": null, \"none\": [], \"target\": [\"html\"]}]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "landmark-no-duplicate-contentinfo",
+            "impact": null,
+            "tags": "cat.semantics,best-practice",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": null, \"id\": \"page-no-duplicate-contentinfo\", \"impact\": \"moderate\", \"message\": \"Page does not have more than one contentinfo landmark\", \"relatedNodes\": []}], \"html\": \"<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\", \"impact\": null, \"none\": [], \"target\": [\"html\"]}]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "link-name",
+            "impact": null,
+            "tags": "cat.name-role-value,wcag2a,wcag412,wcag244,section508,section508.22.a",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": null, \"id\": \"has-visible-text\", \"impact\": \"minor\", \"message\": \"Element has text that is visible to screen readers\", \"relatedNodes\": []}], \"html\": \"<a href=\\\"https://www.sec.gov/developer\\\" target=\\\"_blank\\\">sec.gov/developer</a>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"focusable-no-name\", \"impact\": \"serious\", \"message\": \"Element is not in tab order or has accessible text\", \"relatedNodes\": []}], \"target\": [\"a[href$=\\\"developer\\\"]\"]}, {\"all\": [], \"any\": [{\"data\": null, \"id\": \"has-visible-text\", \"impact\": \"minor\", \"message\": \"Element has text that is visible to screen readers\", \"relatedNodes\": []}], \"html\": \"<a href=\\\"https://public.govdelivery.com/accounts/USSEC/subscriber/new?topic_id=USSEC_260\\\" target=\\\"_blank\\\">sign up for email updates</a>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"focusable-no-name\", \"impact\": \"serious\", \"message\": \"Element is not in tab order or has accessible text\", \"relatedNodes\": []}], \"target\": [\"a[target=\\\"_blank\\\"]:nth-child(2)\"]}, {\"all\": [], \"any\": [{\"data\": null, \"id\": \"has-visible-text\", \"impact\": \"minor\", \"message\": \"Element has text that is visible to screen readers\", \"relatedNodes\": []}], \"html\": \"<a href=\\\"mailto:opendata@sec.gov\\\">opendata@sec.gov</a>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"focusable-no-name\", \"impact\": \"serious\", \"message\": \"Element is not in tab order or has accessible text\", \"relatedNodes\": []}], \"target\": [\"a[href$=\\\"mailto:opendata@sec.gov\\\"]\"]}, {\"all\": [], \"any\": [{\"data\": null, \"id\": \"has-visible-text\", \"impact\": \"minor\", \"message\": \"Element has text that is visible to screen readers\", \"relatedNodes\": []}], \"html\": \"<a href=\\\"#internet\\\">Web Site Privacy and Security Policy</a>\", \"impact\": null, \"none\": [{\"data\": null, \"id\": \"focusable-no-name\", \"impact\": \"serious\", \"message\": \"Element is not in tab order or has accessible text\", \"relatedNodes\": []}], \"target\": [\"a[href$=\\\"#internet\\\"]\"]}]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "page-has-heading-one",
+            "impact": null,
+            "tags": "cat.semantics,best-practice",
+            "nodes": "[{\"all\": [{\"data\": null, \"id\": \"page-has-heading-one\", \"impact\": \"moderate\", \"message\": \"Page has at least one level-one heading\", \"relatedNodes\": [{\"html\": \"<h1>Your Request Originates from an Undeclared Automated Tool</h1>\", \"target\": [\"h1\"]}]}], \"any\": [], \"html\": \"<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\", \"impact\": null, \"none\": [], \"target\": [\"html\"]}]"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "skip-link",
+            "impact": null,
+            "tags": "cat.keyboard,best-practice",
+            "nodes": "[{\"all\": [], \"any\": [{\"data\": null, \"id\": \"skip-link\", \"impact\": \"moderate\", \"message\": \"Skip link target exists\", \"relatedNodes\": []}], \"html\": \"<a href=\\\"#internet\\\">Web Site Privacy and Security Policy</a>\", \"impact\": null, \"none\": [], \"target\": [\"a[href$=\\\"#internet\\\"]\"]}]"
+        }
+    ],
+    "tables_nodes": [
+        {
+            "rule_id": "42",
+            "failure_summary": "Fix any of the following:\n  The <html> element does not have a lang attribute",
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\">",
+            "impact": "serious",
+            "target": "h,t,m,l",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": null, \"id\": \"has-lang\", \"impact\": \"serious\", \"message\": \"The <html> element does not have a lang attribute\", \"relatedNodes\": []}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": "Fix all of the following:\n  Page does not have a main landmark",
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\">",
+            "impact": "moderate",
+            "target": "h,t,m,l",
+            "criteria_all": "[{\"data\": null, \"id\": \"page-has-main\", \"impact\": \"moderate\", \"message\": \"Page does not have a main landmark\", \"relatedNodes\": []}]",
+            "criteria_any": "[]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\">",
+            "impact": "moderate",
+            "target": "h,t,m,l",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": null, \"id\": \"region\", \"impact\": \"moderate\", \"message\": \"Some page content is not contained by landmarks\", \"relatedNodes\": [{\"html\": \"<div id=\\\"header\\\">U.S. Securities and Exchange Commission</div>\", \"target\": [\"#header\"]}, {\"html\": \"<h1>Your Request Originates from an Undeclared Automated Tool</h1>\", \"target\": [\"h1\"]}, {\"html\": \"<p>\", \"target\": [\"p:nth-child(2)\"]}, {\"html\": \"<p>Please declare your traffic by updating your user agent to include company specific information.</p>\", \"target\": [\"#content > p:nth-child(3)\"]}, {\"html\": \"<p>\", \"target\": [\"#content > p:nth-child(4)\"]}, {\"html\": \"<p>For more information, please see the SEC\\u2019s <a href=\\\"#internet\\\">Web Site Privacy and Security Policy</a>. Thank you for your interest in the U.S. Securities and Exchange Commission.\\n</p>\", \"target\": [\"#content > p:nth-child(5)\"]}, {\"html\": \"<p>Reference ID: 0.354fde17.1682362014.25ebb4ab</p>\", \"target\": [\"#content > p:nth-child(6)\"]}, {\"html\": \"<h2>More Information</h2>\", \"target\": [\"h2\"]}, {\"html\": \"<a name=\\\"internet\\\">Internet Security Policy</a>\", \"target\": [\"a[name=\\\"internet\\\"]\"]}, {\"html\": \"<p>\", \"target\": [\".grey_box > p:nth-child(3)\"]}, {\"html\": \"<p>\", \"target\": [\".grey_box > p:nth-child(4)\"]}, {\"html\": \"<p>\", \"target\": [\".grey_box > p:nth-child(5)\"]}, {\"html\": \"<p>\", \"target\": [\".grey_box > p:nth-child(6)\"]}, {\"html\": \"<p>Note that this policy may change as the SEC manages SEC.gov to ensure that the website performs efficiently and remains available to all users.</p>\", \"target\": [\"p:nth-child(7)\"]}, {\"html\": \"<p class=\\\"note\\\"><b>Note:</b> We do not offer technical support for developing or debugging scripted downloading processes.</p>\", \"target\": [\".note\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<h1>Your Request Originates from an Undeclared Automated Tool</h1>",
+            "impact": "serious",
+            "target": "h,1",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"3:1\", \"fgColor\": \"#000000\", \"fontSize\": \"15.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>",
+            "impact": "serious",
+            "target": "p,:,n,t,h,-,c,h,i,l,d,(,2,)",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Please declare your traffic by updating your user agent to include company specific information.</p>",
+            "impact": "serious",
+            "target": "#,c,o,n,t,e,n,t, ,>, ,p,:,n,t,h,-,c,h,i,l,d,(,3,)",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>",
+            "impact": "serious",
+            "target": "#,c,o,n,t,e,n,t, ,>, ,p,:,n,t,h,-,c,h,i,l,d,(,4,)",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<a href=\"https://www.sec.gov/developer\" target=\"_blank\">sec.gov/developer</a>",
+            "impact": "serious",
+            "target": "a,[,h,r,e,f,$,=,\",d,e,v,e,l,o,p,e,r,\",]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#0000ee\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<a href=\"https://public.govdelivery.com/accounts/USSEC/subscriber/new?topic_id=USSEC_260\" target=\"_blank\">sign up for email updates</a>",
+            "impact": "serious",
+            "target": "a,[,t,a,r,g,e,t,=,\",_,b,l,a,n,k,\",],:,n,t,h,-,c,h,i,l,d,(,2,)",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#0000ee\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<a href=\"mailto:opendata@sec.gov\">opendata@sec.gov</a>",
+            "impact": "serious",
+            "target": "a,[,h,r,e,f,$,=,\",m,a,i,l,t,o,:,o,p,e,n,d,a,t,a,@,s,e,c,.,g,o,v,\",]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#0000ee\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>For more information, please see the SEC\u2019s <a href=\"#internet\">Web Site Privacy and Security Policy</a>. Thank you for your interest in the U.S. Securities and Exchange Commission.\n</p>",
+            "impact": "serious",
+            "target": "#,c,o,n,t,e,n,t, ,>, ,p,:,n,t,h,-,c,h,i,l,d,(,5,)",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<a href=\"#internet\">Web Site Privacy and Security Policy</a>",
+            "impact": "serious",
+            "target": "a,[,h,r,e,f,$,=,\",#,i,n,t,e,r,n,e,t,\",]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#0000ee\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Reference ID: 0.354fde17.1682362014.25ebb4ab</p>",
+            "impact": "serious",
+            "target": "#,c,o,n,t,e,n,t, ,>, ,p,:,n,t,h,-,c,h,i,l,d,(,6,)",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p class=\"note\"><b>Note:</b> We do not offer technical support for developing or debugging scripted downloading processes.</p>",
+            "impact": "serious",
+            "target": ".,n,o,t,e",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<b>Note:</b>",
+            "impact": "serious",
+            "target": "b",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#000000\", \"fontSize\": \"10.5pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<div id=\\\"content\\\">\", \"target\": [\"#content\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<body>",
+            "impact": null,
+            "target": "b,o,d,y",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": null, \"id\": \"aria-hidden-body\", \"impact\": \"critical\", \"message\": \"No aria-hidden attribute is present on document body\", \"relatedNodes\": []}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\">",
+            "impact": null,
+            "target": "h,t,m,l",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": null, \"id\": \"internal-link-present\", \"impact\": \"serious\", \"message\": \"Valid skip link found\", \"relatedNodes\": []}, {\"data\": null, \"id\": \"header-present\", \"impact\": \"serious\", \"message\": \"Page has a header\", \"relatedNodes\": []}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<div id=\"header\">U.S. Securities and Exchange Commission</div>",
+            "impact": null,
+            "target": "#,h,e,a,d,e,r",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": \"#003968\", \"contrastRatio\": 11.76, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#ffffff\", \"fontSize\": \"15.0pt\", \"fontWeight\": \"normal\", \"missingData\": null}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element has sufficient color contrast of 11.76\", \"relatedNodes\": []}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<h2>More Information</h2>",
+            "impact": null,
+            "target": "h,2",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": \"#eeeeee\", \"contrastRatio\": 18.09, \"expectedContrastRatio\": \"3:1\", \"fgColor\": \"#000000\", \"fontSize\": \"15.0pt\", \"fontWeight\": \"bold\", \"missingData\": null}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element has sufficient color contrast of 18.09\", \"relatedNodes\": []}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<a name=\"internet\">Internet Security Policy</a>",
+            "impact": null,
+            "target": "a,[,n,a,m,e,=,\",i,n,t,e,r,n,e,t,\",]",
+            "criteria_al

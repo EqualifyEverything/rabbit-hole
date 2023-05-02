@@ -1,0 +1,871 @@
+{
+    "tables_scans": {
+        "engine_name": "Axe",
+        "orientation_angle": null,
+        "orientation_type": "landscape-primary",
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/112.0.5615.137 Safari/537.36",
+        "window_height": 600,
+        "window_width": 800,
+        "scanned_at": "2023-04-24T15:15:52.286Z",
+        "url_id": 1118999,
+        "url": "https://www.va.gov/wilmington-health-care/locations/cape-may-county-va-clinic/"
+    },
+    "tables_rules": [
+        {
+            "rule_type": "violations",
+            "axe_id": "aria-allowed-role",
+            "impact": "minor",
+            "tags": "cat.aria,best-practice"
+        },
+        {
+            "rule_type": "violations",
+            "axe_id": "landmark-banner-is-top-level",
+            "impact": "moderate",
+            "tags": "cat.semantics,best-practice"
+        },
+        {
+            "rule_type": "violations",
+            "axe_id": "landmark-no-duplicate-banner",
+            "impact": "moderate",
+            "tags": "cat.semantics,best-practice"
+        },
+        {
+            "rule_type": "incomplete",
+            "axe_id": "color-contrast",
+            "impact": "serious",
+            "tags": "cat.color,wcag2aa,wcag143"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "accesskeys",
+            "impact": null,
+            "tags": "best-practice,cat.keyboard"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "area-alt",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag111,section508,section508.22.a"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "aria-dpub-role-fallback",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag131"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "autocomplete-valid",
+            "impact": null,
+            "tags": "cat.forms,wcag21aa,wcag135"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "blink",
+            "impact": null,
+            "tags": "cat.time-and-media,wcag2a,wcag222,section508,section508.22.j"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "checkboxgroup",
+            "impact": null,
+            "tags": "cat.forms,best-practice"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "frame-tested",
+            "impact": null,
+            "tags": "cat.structure,review-item"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "frame-title-unique",
+            "impact": null,
+            "tags": "cat.text-alternatives,best-practice"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "frame-title",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag241,wcag412,section508,section508.22.i"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "html-xml-lang-mismatch",
+            "impact": null,
+            "tags": "cat.language,wcag2a,wcag311"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "input-image-alt",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag111,section508,section508.22.a"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "label-title-only",
+            "impact": null,
+            "tags": "cat.forms,best-practice"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "label",
+            "impact": null,
+            "tags": "cat.forms,wcag2a,wcag332,wcag131,section508,section508.22.n"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "layout-table",
+            "impact": null,
+            "tags": "cat.semantics,wcag2a,wcag131"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "marquee",
+            "impact": null,
+            "tags": "cat.parsing,wcag2a,wcag222"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "meta-refresh",
+            "impact": null,
+            "tags": "cat.time,wcag2a,wcag2aaa,wcag221,wcag224,wcag325"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "object-alt",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag111,section508,section508.22.a"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "radiogroup",
+            "impact": null,
+            "tags": "cat.forms,best-practice"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "scope-attr-valid",
+            "impact": null,
+            "tags": "cat.tables,best-practice"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "server-side-image-map",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag211,section508,section508.22.f"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "table-duplicate-name",
+            "impact": null,
+            "tags": "cat.tables,best-practice"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "td-headers-attr",
+            "impact": null,
+            "tags": "cat.tables,wcag2a,wcag131,section508,section508.22.g"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "th-has-data-cells",
+            "impact": null,
+            "tags": "cat.tables,wcag2a,wcag131,section508,section508.22.g"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "video-caption",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag122,section508,section508.22.a"
+        },
+        {
+            "rule_type": "inapplicable",
+            "axe_id": "video-description",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2aa,wcag125,section508,section508.22.b"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "aria-allowed-attr",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag412"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "aria-allowed-role",
+            "impact": "minor",
+            "tags": "cat.aria,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "aria-hidden-body",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag412"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "aria-required-attr",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag412"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "aria-required-children",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag131"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "aria-required-parent",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag131"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "aria-roles",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag412"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "aria-valid-attr-value",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag412"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "aria-valid-attr",
+            "impact": null,
+            "tags": "cat.aria,wcag2a,wcag412"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "button-name",
+            "impact": null,
+            "tags": "cat.name-role-value,wcag2a,wcag412,section508,section508.22.a"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "bypass",
+            "impact": null,
+            "tags": "cat.keyboard,wcag2a,wcag241,section508,section508.22.o"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "color-contrast",
+            "impact": "serious",
+            "tags": "cat.color,wcag2aa,wcag143"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "definition-list",
+            "impact": null,
+            "tags": "cat.structure,wcag2a,wcag131"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "dlitem",
+            "impact": null,
+            "tags": "cat.structure,wcag2a,wcag131"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "document-title",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag242"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "duplicate-id-active",
+            "impact": null,
+            "tags": "cat.parsing,wcag2a,wcag411"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "duplicate-id-aria",
+            "impact": null,
+            "tags": "cat.parsing,wcag2a,wcag411"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "duplicate-id",
+            "impact": null,
+            "tags": "cat.parsing,wcag2a,wcag411"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "empty-heading",
+            "impact": null,
+            "tags": "cat.name-role-value,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "heading-order",
+            "impact": null,
+            "tags": "cat.semantics,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "html-has-lang",
+            "impact": null,
+            "tags": "cat.language,wcag2a,wcag311"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "html-lang-valid",
+            "impact": null,
+            "tags": "cat.language,wcag2a,wcag311"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "image-alt",
+            "impact": null,
+            "tags": "cat.text-alternatives,wcag2a,wcag111,section508,section508.22.a"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "image-redundant-alt",
+            "impact": null,
+            "tags": "cat.text-alternatives,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "landmark-banner-is-top-level",
+            "impact": "moderate",
+            "tags": "cat.semantics,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "landmark-contentinfo-is-top-level",
+            "impact": null,
+            "tags": "cat.semantics,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "landmark-main-is-top-level",
+            "impact": null,
+            "tags": "cat.semantics,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "landmark-no-duplicate-contentinfo",
+            "impact": null,
+            "tags": "cat.semantics,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "landmark-one-main",
+            "impact": null,
+            "tags": "cat.semantics,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "link-name",
+            "impact": null,
+            "tags": "cat.name-role-value,wcag2a,wcag412,wcag244,section508,section508.22.a"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "list",
+            "impact": null,
+            "tags": "cat.structure,wcag2a,wcag131"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "listitem",
+            "impact": null,
+            "tags": "cat.structure,wcag2a,wcag131"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "meta-viewport-large",
+            "impact": null,
+            "tags": "cat.sensory-and-visual-cues,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "meta-viewport",
+            "impact": null,
+            "tags": "cat.sensory-and-visual-cues,wcag2aa,wcag144"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "page-has-heading-one",
+            "impact": null,
+            "tags": "cat.semantics,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "region",
+            "impact": null,
+            "tags": "cat.keyboard,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "skip-link",
+            "impact": null,
+            "tags": "cat.keyboard,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "tabindex",
+            "impact": null,
+            "tags": "cat.keyboard,best-practice"
+        },
+        {
+            "rule_type": "passes",
+            "axe_id": "valid-lang",
+            "impact": null,
+            "tags": "cat.language,wcag2aa,wcag312"
+        }
+    ],
+    "tables_nodes": [
+        {
+            "rule_id": "42",
+            "failure_summary": "Fix any of the following:\n  role banner  is not allowed for given element",
+            "html": "<header class=\"header\" role=\"banner\">",
+            "impact": "minor",
+            "target": "h,e,a,d,e,r",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": [\"banner\"], \"id\": \"aria-allowed-role\", \"impact\": \"minor\", \"message\": \"role banner  is not allowed for given element\", \"relatedNodes\": []}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": "Fix any of the following:\n  role definition  is not allowed for given element",
+            "html": "<dd role=\"definition\">",
+            "impact": "minor",
+            "target": "va-on-this-page,dd",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": [\"definition\"], \"id\": \"aria-allowed-role\", \"impact\": \"minor\", \"message\": \"role definition  is not allowed for given element\", \"relatedNodes\": []}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": "Fix any of the following:\n  The banner landmark is contained in another landmark.",
+            "html": "<div class=\"va-banner-body\" role=\"banner\">",
+            "impact": "moderate",
+            "target": "#\\34 8052,.va-banner-body",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"role\": \"banner\"}, \"id\": \"landmark-is-top-level\", \"impact\": \"moderate\", \"message\": \"The banner landmark is contained in another landmark.\", \"relatedNodes\": []}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": "Fix any of the following:\n  Document has more than one banner landmark",
+            "html": "<html lang=\"en\" class=\"hydrated\">",
+            "impact": "moderate",
+            "target": "h,t,m,l",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": null, \"id\": \"page-no-duplicate-banner\", \"impact\": \"moderate\", \"message\": \"Document has more than one banner landmark\", \"relatedNodes\": [{\"html\": \"<header class=\\\"header\\\" role=\\\"banner\\\">\", \"target\": [\"header\"]}, {\"html\": \"<div class=\\\"va-banner-body\\\" role=\\\"banner\\\">\", \"target\": [[\"#\\\\34 8052\", \".va-banner-body\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<span>",
+            "impact": "serious",
+            "target": ".,s,i,t,e,w,i,d,e,-,s,e,a,r,c,h,-,d,r,o,p,-,d,o,w,n,-,p,a,n,e,l,-,b,u,t,t,o,n, ,>, ,s,p,a,n",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#ffffff\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button class=\\\"sitewide-search-drop-down-panel-button va-btn-withicon va-dropdown-trigger va-btn-withicon va-dropdown-trigger\\\" aria-controls=\\\"search\\\" aria-expanded=\\\"false\\\">\", \"target\": [\".sitewide-search-drop-down-panel-button\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button type=\"button\" aria-expanded=\"false\" aria-controls=\"vetnav-va-benefits-and-health-care\" aria-haspopup=\"true\" class=\"vetnav-level1\" data-e2e-id=\"va-benefits-and-health-care-0\">VA Benefits and Health Care</button>",
+            "impact": "serious",
+            "target": "b,u,t,t,o,n,[,d,a,t,a,-,e,2,e,-,i,d,=,\",v,a,-,b,e,n,e,f,i,t,s,-,a,n,d,-,h,e,a,l,t,h,-,c,a,r,e,-,0,\",]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#ffffff\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button type=\\\"button\\\" aria-expanded=\\\"false\\\" aria-controls=\\\"vetnav-va-benefits-and-health-care\\\" aria-haspopup=\\\"true\\\" class=\\\"vetnav-level1\\\" data-e2e-id=\\\"va-benefits-and-health-care-0\\\">VA Benefits and Health Care</button>\", \"target\": [\"button[data-e2e-id=\\\"va-benefits-and-health-care-0\\\"]\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button type=\"button\" aria-expanded=\"false\" aria-controls=\"vetnav-about-va\" aria-haspopup=\"true\" class=\"vetnav-level1\" data-e2e-id=\"about-va-1\">About VA</button>",
+            "impact": "serious",
+            "target": "b,u,t,t,o,n,[,a,r,i,a,-,c,o,n,t,r,o,l,s,=,\",v,e,t,n,a,v,-,a,b,o,u,t,-,v,a,\",]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#ffffff\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button type=\\\"button\\\" aria-expanded=\\\"false\\\" aria-controls=\\\"vetnav-about-va\\\" aria-haspopup=\\\"true\\\" class=\\\"vetnav-level1\\\" data-e2e-id=\\\"about-va-1\\\">About VA</button>\", \"target\": [\"button[aria-controls=\\\"vetnav-about-va\\\"]\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<a aria-current=\"page\" href=\"/wilmington-health-care/locations/cape-may-county-va-clinic\" id=\"7a0f00b206b9495071fdc71512c92e18\" lang=\"en\">\n            Cape May County VA Clinic\n        </a>",
+            "impact": "serious",
+            "target": "#,\\,3,7, ,a,0,f,0,0,b,2,0,6,b,9,4,9,5,0,7,1,f,d,c,7,1,5,1,2,c,9,2,e,1,8",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": null}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Unable to determine contrast ratio\", \"relatedNodes\": []}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<span class=\"\"> Locations </span>",
+            "impact": "serious",
+            "target": ".,e,x,p,a,n,d,e,d, ,>, ,s,p,a,n",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#0071bb\", \"fontSize\": \"11.3pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgGradient\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background gradient\", \"relatedNodes\": [{\"html\": \"<a aria-label=\\\"Locations\\\" class=\\\"va-sidenav-item-label expanded\\\" href=\\\"/wilmington-health-care/locations\\\" rel=\\\"noopener noreferrer\\\" style=\\\"padding-left: 20px; pointer-events: all;\\\"><span class=\\\"\\\"> Locations </span></a>\", \"target\": [\".expanded\"]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<span class=\"\"> Cape May County VA Clinic </span>",
+            "impact": "serious",
+            "target": ".,o,p,e,n, ,>, ,s,p,a,n",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"11.3pt\", \"fontWeight\": \"normal\", \"missingData\": null}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Unable to determine contrast ratio\", \"relatedNodes\": []}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<span class=\"alert-expandable-title\"><span class=\"sr-only\">Alert:&nbsp;</span>COVID-19 health protection: Levels medium</span>",
+            "impact": "serious",
+            "target": "#\\32 8cb30cc0eaae0070891c8a6cefe2d88,.alert-expandable-title",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"elmPartiallyObscuring\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined because it partially overlaps other elements\", \"relatedNodes\": []}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">Parking</button>",
+            "impact": "serious",
+            "target": "va-accordion-item[header=\"Parking\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">Parking</button>\", \"target\": [[\"va-accordion-item[header=\\\"Parking\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">Transportation services and schedules</button>",
+            "impact": "serious",
+            "target": "va-accordion-item[level=\"\\33 \"]:nth-child(2),button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">Transportation services and schedules</button>\", \"target\": [[\"va-accordion-item[level=\\\"\\\\33 \\\"]:nth-child(2)\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">Lodging for patients and families</button>",
+            "impact": "serious",
+            "target": "va-accordion-item[level=\"\\33 \"]:nth-child(3),button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">Lodging for patients and families</button>\", \"target\": [[\"va-accordion-item[level=\\\"\\\\33 \\\"]:nth-child(3)\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Addiction and substance use care\n      <p>Drug and alcohol treatment and rehabilitation</p></button>",
+            "impact": "serious",
+            "target": ".facilities_health_service:nth-child(1),button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Addiction and substance use care\\n      <p>Drug and alcohol treatment and rehabilitation</p></button>\", \"target\": [[\".facilities_health_service:nth-child(1)\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Drug and alcohol treatment and rehabilitation</p>",
+            "impact": "serious",
+            "target": ".facilities_health_service:nth-child(1),p",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Addiction and substance use care\\n      <p>Drug and alcohol treatment and rehabilitation</p></button>\", \"target\": [[\".facilities_health_service:nth-child(1)\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Caregiver support\n      </button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Caregiver\\ support\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Caregiver support\\n      </button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Caregiver\\\\ support\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Homeless Veteran care\n      <p>Transitional and supportive housing, HUD-VASH</p></button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Homeless\\ Veteran\\ care\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Homeless Veteran care\\n      <p>Transitional and supportive housing, HUD-VASH</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Homeless\\\\ Veteran\\\\ care\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Transitional and supportive housing, HUD-VASH</p>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Homeless\\ Veteran\\ care\"],p",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Homeless Veteran care\\n      <p>Transitional and supportive housing, HUD-VASH</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Homeless\\\\ Veteran\\\\ care\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        LGBTQ+ Veteran care\n      <p>Lesbian, gay, bisexual, transgender, and queer/questioning identities</p></button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"LGBTQ\\+\\ Veteran\\ care\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        LGBTQ+ Veteran care\\n      <p>Lesbian, gay, bisexual, transgender, and queer/questioning identities</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"LGBTQ\\\\+\\\\ Veteran\\\\ care\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Lesbian, gay, bisexual, transgender, and queer/questioning identities</p>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"LGBTQ\\+\\ Veteran\\ care\"],p",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        LGBTQ+ Veteran care\\n      <p>Lesbian, gay, bisexual, transgender, and queer/questioning identities</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"LGBTQ\\\\+\\\\ Veteran\\\\ care\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Laboratory and pathology\n      <p>Blood draw and clinical testing</p></button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Laboratory\\ and\\ pathology\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Laboratory and pathology\\n      <p>Blood draw and clinical testing</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Laboratory\\\\ and\\\\ pathology\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Blood draw and clinical testing</p>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Laboratory\\ and\\ pathology\"],p",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Laboratory and pathology\\n      <p>Blood draw and clinical testing</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Laboratory\\\\ and\\\\ pathology\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        MOVE! weight management\n      </button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"MOVE\\!\\ weight\\ management\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        MOVE! weight management\\n      </button>\", \"target\": [[\"va-accordion-item[data-label=\\\"MOVE\\\\!\\\\ weight\\\\ management\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Mental health care\n      <p>Behavioral health</p></button>",
+            "impact": "serious",
+            "target": "va-accordion-item[subheader=\"Behavioral\\ health\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Mental health care\\n      <p>Behavioral health</p></button>\", \"target\": [[\"va-accordion-item[subheader=\\\"Behavioral\\\\ health\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Behavioral health</p>",
+            "impact": "serious",
+            "target": "va-accordion-item[subheader=\"Behavioral\\ health\"],p",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Mental health care\\n      <p>Behavioral health</p></button>\", \"target\": [[\"va-accordion-item[subheader=\\\"Behavioral\\\\ health\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Military sexual trauma care\n      </button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Military\\ sexual\\ trauma\\ care\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Military sexual trauma care\\n      </button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Military\\\\ sexual\\\\ trauma\\\\ care\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Minority Veteran care\n      </button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Minority\\ Veteran\\ care\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Minority Veteran care\\n      </button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Minority\\\\ Veteran\\\\ care\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Nutrition, food, and dietary care\n      </button>",
+            "impact": "serious",
+            "target": ".facilities_health_service[data-childlabel=\"\"]:nth-child(10),button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Nutrition, food, and dietary care\\n      </button>\", \"target\": [[\".facilities_health_service[data-childlabel=\\\"\\\"]:nth-child(10)\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Optometry\n      <p>Vision care, corrective lenses and eyeglasses</p></button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Optometry\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Optometry\\n      <p>Vision care, corrective lenses and eyeglasses</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Optometry\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Vision care, corrective lenses and eyeglasses</p>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Optometry\"],p",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Optometry\\n      <p>Vision care, corrective lenses and eyeglasses</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Optometry\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        PTSD care\n      </button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"PTSD\\ care\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        PTSD care\\n      </button>\", \"target\": [[\"va-accordion-item[data-label=\\\"PTSD\\\\ care\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Pharmacy\n      <p>Prescriptions, Rx, medications, pharmacist consultation</p></button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Pharmacy\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Pharmacy\\n      <p>Prescriptions, Rx, medications, pharmacist consultation</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Pharmacy\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Prescriptions, Rx, medications, pharmacist consultation</p>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Pharmacy\"],p",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Pharmacy\\n      <p>Prescriptions, Rx, medications, pharmacist consultation</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Pharmacy\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Podiatry\n      <p>Foot, ankle and lower extremities</p></button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Podiatry\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Podiatry\\n      <p>Foot, ankle and lower extremities</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Podiatry\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Foot, ankle and lower extremities</p>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Podiatry\"],p",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Podiatry\\n      <p>Foot, ankle and lower extremities</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Podiatry\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Primary care\n      <p>Family and internal medicine</p></button>",
+            "impact": "serious",
+            "target": "va-accordion-item[subheader=\"Family\\ and\\ internal\\ medicine\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Primary care\\n      <p>Family and internal medicine</p></button>\", \"target\": [[\"va-accordion-item[subheader=\\\"Family\\\\ and\\\\ internal\\\\ medicine\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Family and internal medicine</p>",
+            "impact": "serious",
+            "target": "va-accordion-item[subheader=\"Family\\ and\\ internal\\ medicine\"],p",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Primary care\\n      <p>Family and internal medicine</p></button>\", \"target\": [[\"va-accordion-item[subheader=\\\"Family\\\\ and\\\\ internal\\\\ medicine\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Psychiatry\n      </button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Psychiatry\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Psychiatry\\n      </button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Psychiatry\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Psychology\n      </button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Psychology\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Psychology\\n      </button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Psychology\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Returning service member care\n      <p>Post-9/11 Veterans (OEF, OIF, OND) transition and care management services</p></button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Returning\\ service\\ member\\ care\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Returning service member care\\n      <p>Post-9/11 Veterans (OEF, OIF, OND) transition and care management services</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Returning\\\\ service\\\\ member\\\\ care\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Post-9/11 Veterans (OEF, OIF, OND) transition and care management services</p>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Returning\\ service\\ member\\ care\"],p",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Returning service member care\\n      <p>Post-9/11 Veterans (OEF, OIF, OND) transition and care management services</p></button>\", \"target\": [[\"va-accordion-item[data-label=\\\"Returning\\\\ service\\\\ member\\\\ care\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Smoking and tobacco cessation\n      <p>Quit smoking</p></button>",
+            "impact": "serious",
+            "target": "va-accordion-item[subheader=\"Quit\\ smoking\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Smoking and tobacco cessation\\n      <p>Quit smoking</p></button>\", \"target\": [[\"va-accordion-item[subheader=\\\"Quit\\\\ smoking\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<p>Quit smoking</p>",
+            "impact": "serious",
+            "target": "va-accordion-item[subheader=\"Quit\\ smoking\"],p",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"normal\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color could not be determined due to a background image\", \"relatedNodes\": [{\"html\": \"<button aria-expanded=\\\"false\\\" aria-controls=\\\"content\\\">\\n        Smoking and tobacco cessation\\n      <p>Quit smoking</p></button>\", \"target\": [[\"va-accordion-item[subheader=\\\"Quit\\\\ smoking\\\"]\", \"button[aria-controls=\\\"content\\\"]\"]]}]}]",
+            "criteria_none": "[]"
+        },
+        {
+            "rule_id": "42",
+            "failure_summary": null,
+            "html": "<button aria-expanded=\"false\" aria-controls=\"content\">\n        Social work\n      </button>",
+            "impact": "serious",
+            "target": "va-accordion-item[data-label=\"Social\\ work\"],button[aria-controls=\"content\"]",
+            "criteria_all": "[]",
+            "criteria_any": "[{\"data\": {\"bgColor\": null, \"contrastRatio\": 0, \"expectedContrastRatio\": \"4.5:1\", \"fgColor\": \"#323a45\", \"fontSize\": \"12.0pt\", \"fontWeight\": \"bold\", \"missingData\": \"bgImage\"}, \"id\": \"color-contrast\", \"impact\": \"serious\", \"message\": \"Element's background color
