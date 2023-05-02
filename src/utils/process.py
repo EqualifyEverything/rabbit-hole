@@ -35,3 +35,7 @@ def process_tables_scans(tables_scans):
     )
     logger.debug(f'Created Scan ID: {scan_id}')
     return scan_id
+
+
+def process_uppies(message_uppies):
+    logger.debug('Starting to process Uppies Message')

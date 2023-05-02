@@ -55,7 +55,7 @@ def execute_insert(query, params=None, return_id=True, cur=None):
         # Fetch the results if requested
         result = None
         if return_id:
-            result = cur.fetchone() or ()  # return an empty tuple if None is returned
+            result = cur.fetchone() or ()  # return an empty tuple if None
         else:
             result = cur.rowcount
             logger.debug(f'🗄️✏️ Rows affected: {result}')
@@ -78,11 +78,9 @@ def execute_insert(query, params=None, return_id=True, cur=None):
     return result
 
 
-
 # # # # # # # # # #
 
 # Bulk Inserts
-
 
 def execute_bulk_insert(query, params_list):
     # Connect to the database
@@ -120,7 +118,10 @@ def execute_bulk_insert(query, params_list):
 # Queries
 
 
-def insert_scan(engine_name, orientation_angle, orientation_type, user_agent, window_height, window_width, scanned_at, url_id, url):
+def insert_scan(
+    engine_name, orientation_angle, orientation_type, user_agent,
+    window_height, window_width, scanned_at, url_id, url
+):
     query = """
         INSERT INTO axe.scan_data (
             engine_name, orientation_angle, orientation_type,
@@ -171,6 +172,3 @@ def insert_tables_rules(scan_id, tables_rules):
     rows_affected = execute_bulk_insert(query, params_list)
     logger.debug(f'Rules Inserted: {rows_affected}')
     return rows_affected
-
-
-# def insert_uppies():
