@@ -78,8 +78,10 @@ def metrics():
     response.headers['Content-Type'] = 'text/plain; charset=utf-8'
     return response
 
-
 if __name__ == '__main__':
-    # Get the port number from the environment variable or use 8083 as default
+    # Run the /start endpoint by default when the app starts
+    start()
+
+    # Get the port number from the environment variable or use 8084 as default
     app_port = int(os.environ.get('APP_PORT', 8084))
     app.run(debug=True, host='0.0.0.0', port=app_port)
