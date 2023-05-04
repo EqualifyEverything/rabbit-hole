@@ -17,6 +17,12 @@ COPY src /app/src
 # Env Variables
 ENV APP_PORT 8084
 
+ENV DB_HOST postgres
+ENV DB_PORT 5432
+ENV DB_USER a11ydata
+ENV DB_PASSWORD a11yAllTheThings!
+ENV DB_NAME a11ydata
+
 # Logging Level
 ENV LOG_LEVEL INFO
 
