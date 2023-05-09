@@ -59,12 +59,13 @@ def update_url(url_id, column, status):
         query = """
             UPDATE targets.urls
             SET %s = %s
-            WHERE id = %s;
+            WHERE id = %s
+            RETURNING is_objective;
         """
         params = (
             column, status, url_id
         )
-        execute_insert(query, params)
-        logger.debug(f'URL {url_id} updated with error')
+        things = execute_insert(query, params)
+        logger.debug(f'URL {url_id} updated with error. {things}')
     except Exception as e:
         logger.error(f"Error updating URL {url_id} with error: {e}")
