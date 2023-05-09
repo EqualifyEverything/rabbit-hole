@@ -59,6 +59,6 @@ Here lie the scripts that handle all things datay. 📚
 Welcome to the database guardian! This file specifies the connection class that takes care of opening and closing the database connections, multiplies their rabbit-ness by performing tests, and, of course, securing their whereabouts. 🐇🔐
 
 ### License
-This repo is under the GPL-3.0 License. In a nutshell, this means you're free to use, modify, and distribute this software as long as you follow the requirements specified in the LICENSE file. You can find it here: LICENSE
+This repo is under the GPL-3.0 License. In a nutshell, this means you're free to use, modify, and distribute this software as long as you follow the requirements specified in the LICENSE file. You can find it here: [LICENSE](LICENSE)
 
 ## Happy exploring the A11yRabbit Hole! 🕳️🐇🎉
