@@ -29,4 +29,4 @@ ENV LOG_LEVEL INFO
 EXPOSE $APP_PORT
 
 # Run main.py when the container launches
-CMD ["python", "src/main.py"]
+CMD ["python", "src/record.py"]
