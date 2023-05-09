@@ -9,9 +9,9 @@ from utils.process.errors import process_crawl_errors, process_axe_errors, proce
 # queues_to_check = ["landing_axe", "landing_crawler", "landing_uppies"]
 queue_processors = {
     "landing_crawler": process_crawler,
-    "landing_axe": process_axe,
+    "landing_axe": process_axe
     # "landing_uppies": process_uppies,
-    "error_crawler": process_crawl_errors
+    # "error_crawler": process_crawl_errors
     # "error_axe": process_axe_errors
     # "errror_uppies": process_uppies_errors
     }

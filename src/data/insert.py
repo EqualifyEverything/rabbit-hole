@@ -30,7 +30,7 @@ def release_pooling(conn):
 # Normal Insert
 
 
-def execute_insert(query, params=None, return_id=True, cur=None):
+def execute_insert(query, params=None, return_id=True, cur=None, expect_result=True):
     # Connect to the database
     if use_pooling:
         conn = connection_pooling()
@@ -54,11 +54,14 @@ def execute_insert(query, params=None, return_id=True, cur=None):
 
         # Fetch the results if requested
         result = None
-        if return_id:
-            result = cur.fetchone() or ()  # return an empty tuple if None
+        if expect_result:
+            if return_id:
+                result = cur.fetchone() or ()  # return an empty tuple if None
+            else:
+                result = cur.rowcount
+                logger.debug(f'🗄️✏️ Rows affected: {result}')
         else:
-            result = cur.rowcount
-            logger.debug(f'🗄️✏️ Rows affected: {result}')
+            result = None
     except Exception as e:
         logger.error(f"🗄️✏️ Error executing insert query: {e}\n{traceback.format_exc()}")
         logger.error(f"🗄️✏️ Failed query: {query}")
@@ -76,6 +79,7 @@ def execute_insert(query, params=None, return_id=True, cur=None):
         logger.debug("🗄️✏️ Cursor and connection closed")
 
     return result
+
 
 
 # # # # # # # # # #
@@ -229,8 +233,5 @@ def record_error(queue, url_id, error_message):
         ON CONFLICT (url_id, error_message, queue) DO UPDATE SET
             updated_at = NOW();
     """
-    params = (
-        url_id, error_message, queue
-    )
-    execute_insert(query, params)
-
+    params = (url_id, error_message, queue)
+    execute_insert(query, params, expect_result=False)
