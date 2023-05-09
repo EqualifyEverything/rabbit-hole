@@ -172,3 +172,47 @@ def insert_tables_rules(scan_id, tables_rules):
     rows_affected = execute_bulk_insert(query, params_list)
     logger.debug(f'Rules Inserted: {rows_affected}')
     return rows_affected
+
+def create_crawl(
+        url_id, urls_found
+    ):
+        query = """
+            INSERT INTO results.crawl (
+                url_id, urls_found
+            ) VALUES (
+                %s, %s
+            ) RETURNING id;
+        """
+
+        params = (
+            url_id, urls_found
+        )
+
+        crawl_id = execute_insert(query, params)
+        if not crawl_id:
+            raise ValueError("Error creating new crawl")
+
+        return crawl_id[0]
+
+
+def record_urls(scan_id, url_id, urls):
+    query = """
+        INSERT INTO targets.urls (
+            url, crawled_at, source_url_id,
+            recent_crawl_id, discovery_crawl_id
+        ) VALUES (
+            %s, NOW(), %s, %s, %s
+        )
+        ON CONFLICT (url) DO UPDATE SET
+            crawled_at = NOW(),
+            recent_crawl_id = EXCLUDED.recent_crawl_id
+        RETURNING id;
+    """
+
+    # Prepare the data for bulk insert
+    params_list = [(url, url_id, scan_id, scan_id) for url in urls]
+
+    # Perform the bulk insert
+    url_ids = execute_bulk_insert(query, params_list)
+    logger.debug(f'URLs Inserted/Updated: {url_ids}')
+    return url_ids
