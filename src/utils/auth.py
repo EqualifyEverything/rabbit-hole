@@ -19,8 +19,10 @@ def rabbit(queue_name, message):
             body=message,
             properties=pika.BasicProperties(delivery_mode=2)  # Make the messages persistent
         )
+        logger.debug(f'Message published to {queue_name}')
         channel.close()
         connection.close()
+        logger.debug('Channel and connection closed')
         return channel, connection
     except Exception as e:
         logger.error(f"You've got a sick rabbit... {e}")
@@ -46,4 +48,12 @@ def catch_rabbits(queue_name, process_func):
     )
     logger.info(f'🐇 [*] Waiting for messages in {queue_name}. To exit press CTRL+C')
 
-    channel.start_consuming()
+    try:
+        channel.start_consuming()
+    except KeyboardInterrupt:
+        logger.warn('CTRL+C pressed. Stopping message consumption...')
+    finally:
+        channel.stop_consuming()
+        channel.close()
+        connection.close()
+        logger.debug('Channel and connection closed')

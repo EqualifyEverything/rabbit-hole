@@ -4,6 +4,7 @@ from utils.watch import logger
 
 
 def process_crawler(channel, method, properties, body):
+    logger.debug('Processing Crawler message...')
     messages = json.loads(body)
 
     # Count the number of url items in the message
@@ -23,7 +24,12 @@ def process_crawler(channel, method, properties, body):
         # url_id = message['source_url_id']
         url = message['url']
         url_list.append(url)
+        logger.debug(f'URL added to list: {url}')
 
     # Call insert/update URLs
+    logger.debug(f'Recording URLs for scan_id: {scan_id}')
     record_urls(scan_id, first_url_id, url_list)
+    logger.debug('URLs recorded')
+
     channel.basic_ack(delivery_tag=method.delivery_tag)
+    logger.debug('Crawler message acknowledged')
