@@ -3,6 +3,10 @@ from data.insert import create_crawl, record_urls
 from utils.watch import logger
 
 
+def process_uppies(channel, method, properties, body):
+    logger.info('PROCESSING UPPIES PLACEHOLDER')
+
+
 def process_crawler(channel, method, properties, body):
     messages = json.loads(body)
 
