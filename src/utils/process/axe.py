@@ -1,12 +1,11 @@
-import time
 import json
 from utils.watch import logger
 from data.insert import insert_scan, insert_tables_rules
 
 
-def process_message(message):
+def process_message(channel, method, properties, body):
     # Deserialize the message
-    data = json.loads(message)
+    data = json.loads(body)
 
     # Process the scan data and get the scan_id
     scan_id = process_tables_scans(data['tables_scans'])
@@ -14,6 +13,8 @@ def process_message(message):
     # Insert data into the axe.rules table
     tables_rules = data.get('tables_rules', [])
     insert_tables_rules(scan_id, tables_rules)
+
+    channel.basic_ack(delivery_tag=method.delivery_tag)
 
 
 def process_tables_scans(tables_scans):
