@@ -13,6 +13,7 @@ def process_message(channel, method, properties, body):
     # Insert data into the axe.rules table
     tables_rules = data.get('tables_rules', [])
     insert_tables_rules(scan_id, tables_rules)
+    logger.debug('Inserted new Axe Scan Rule...')
 
     channel.basic_ack(delivery_tag=method.delivery_tag)
 
@@ -36,7 +37,3 @@ def process_tables_scans(tables_scans):
     )
     logger.debug(f'Created Scan ID: {scan_id}')
     return scan_id
-
-
-def process_uppies(message_uppies):
-    logger.debug('Starting to process Uppies Message')
