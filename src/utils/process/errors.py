@@ -56,14 +56,14 @@ def update_url(url_id, column, status):
     try:
         logger.debug('Beginning to update url with error')
         # Update the active_.... column with status
-        query = """
+        query = f"""
             UPDATE targets.urls
-            SET %s = %s
+            SET {column} = %s
             WHERE id = %s
             RETURNING is_objective;
         """
         params = (
-            column, status, url_id
+            status, url_id
         )
         things = execute_insert(query, params)
         logger.debug(f'URL {url_id} updated with error. {things}')
