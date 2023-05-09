@@ -1,23 +1,27 @@
 from utils.watch import logger
 from utils.auth import catch_rabbits
 import json
-from utils.process.axe import process_message as process_axe_message
+from utils.process.axe import process_axe
 from utils.process.crawler import process_crawler
-
+from utils.process.erros import process_crawl_errors
 
 # queues_to_check = ["landing_axe", "landing_crawler", "landing_uppies"]
 queue_processors = {
     "landing_crawler": process_crawler,
-    "landing_axe": process_axe_message
+    "landing_axe": process_axe,
+    "error_crawler": process_crawl_errors
     }
 
 
-def process_message(channel, method, properties, body):
-    logger.info(f'Processing new message: {channel}')
-    message = json.loads(body)
-    process_crawler(message)
-    channel.basic_ack(delivery_tag=method.delivery_tag)
-    logger.debug(f'Message processed and acknowledged: {method.delivery_tag}')
+def process_message(processor):
+    def wrapper(channel, method, properties, body):
+        logger.info(f'Processing new message: {channel}')
+        message = json.loads(body)
+        processor(message)
+        channel.basic_ack(delivery_tag=method.delivery_tag)
+        logger.debug(
+            f'Message processed and acknowledged: {method.delivery_tag}')
+    return wrapper
 
 
 def main():
@@ -29,7 +33,7 @@ def main():
     except Exception as e:
         logger.error(f'Error in main function: {e}')
     finally:
-        logger.warn('Main function finished')
+        logger.info('Main function finished')
 
 
 if __name__ == "__main__":
