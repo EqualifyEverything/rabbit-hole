@@ -173,6 +173,7 @@ def insert_tables_rules(scan_id, tables_rules):
     logger.debug(f'Rules Inserted: {rows_affected}')
     return rows_affected
 
+
 def create_crawl(
         url_id, urls_found
     ):
@@ -216,3 +217,20 @@ def record_urls(scan_id, url_id, urls):
     url_ids = execute_bulk_insert(query, params_list)
     logger.debug(f'URLs Inserted/Updated: {url_ids}')
     return url_ids
+
+
+def record_error(queue, url_id, error_message):
+    query = """
+        INSERT INTO results.errors (
+            url_id, error_message, queue
+        ) VALUES (
+            %s, %s, %s
+        )
+        ON CONFLICT (url_id, error_message, queue) DO UPDATE SET
+            updated_at = NOW();
+    """
+    params = (
+        url_id, error_message, queue
+    )
+    execute_insert(query, params)
+
