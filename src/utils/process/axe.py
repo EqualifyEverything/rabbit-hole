@@ -3,7 +3,7 @@ from utils.watch import logger
 from data.insert import insert_scan, insert_tables_rules
 
 
-def process_message(channel, method, properties, body):
+def process_axe(channel, method, properties, body):
     logger.debug('Processing Axe message...')
     try:
         # Deserialize the message
