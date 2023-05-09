@@ -1,6 +1,7 @@
 from utils.watch import logger
 from utils.auth import catch_rabbits
 import json
+import threading
 from utils.process.axe import process_axe
 from utils.process.crawler import process_crawler
 from utils.process.errors import process_crawl_errors, process_axe_errors, process_uppies_errors
@@ -29,10 +30,17 @@ def process_message(processor):
 
 def main():
     logger.info('Starting main function')
+    threads = []
     try:
         for queue_name, processor in queue_processors.items():
             logger.info(f'Starting processing for queue: {queue_name}')
-            catch_rabbits(queue_name, processor)
+            t = threading.Thread(
+                target=catch_rabbits, args=(queue_name, processor))
+            t.start()
+            threads.append(t)
+
+        for t in threads:
+            t.join()
     except Exception as e:
         logger.error(f'Error in main function: {e}')
     finally:
