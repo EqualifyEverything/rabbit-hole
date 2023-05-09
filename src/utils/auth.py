@@ -27,7 +27,7 @@ def rabbit(queue_name, message):
         return None, None
 
 # Catching Rabbits
-def catch_rabbits(queue_name, callback):
+def catch_rabbits(queue_name, process_func):
     logger.debug('Connecting to RabbitMQ server...')
     credentials = pika.PlainCredentials('rabbit_hole', 'lets_insert_things')
     connection = pika.BlockingConnection(pika.ConnectionParameters('rabbit', credentials=credentials, virtual_host='gova11y'))
@@ -41,7 +41,7 @@ def catch_rabbits(queue_name, callback):
     channel.basic_qos(prefetch_count=1)
     channel.basic_consume(
         queue=queue_name,
-        on_message_callback=callback,
+        on_message_callback=process_func,
         auto_ack=False
     )
     logger.info(f'🐇 [*] Waiting for messages in {queue_name}. To exit press CTRL+C')
