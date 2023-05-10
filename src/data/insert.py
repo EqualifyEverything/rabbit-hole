@@ -235,3 +235,4 @@ def record_error(queue, url_id, error_message):
     """
     params = (url_id, error_message, queue)
     execute_insert(query, params, expect_result=False)
+    logger.debug(f'Recorded Error from {queue}')
