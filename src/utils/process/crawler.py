@@ -1,5 +1,5 @@
 import json
-from data.insert import create_crawl, record_urls
+from data.insert import create_crawl, record_urls, execute_insert
 from utils.watch import logger
 
 
@@ -33,3 +33,36 @@ def process_crawler(channel, method, properties, body):
 
     channel.basic_ack(delivery_tag=method.delivery_tag)
     logger.debug('Crawler message acknowledged')
+
+
+# Handle Gooseegg Results
+def process_crawler_geese(channel, method, properties, body):
+    logger.debug('Processing Crawler message...')
+    data = json.loads(body)
+    url_id = data['url_id']
+    logger.debug(f'Beginning to mark {url_id} as errored...')
+    # Update targets.urls with active_crawler false
+    column = 'active_crawler'
+    status = 'false'
+    update_url(url_id, column, status)
+    logger.debug(f'{url_id} marked as active_crawler FALSE')
+
+
+# Update the url active_ column in targets.urls
+def update_url(url_id, column, status):
+    try:
+        logger.debug('Beginning to update url with error')
+        # Update the active_.... column with status
+        query = f"""
+            UPDATE targets.urls
+            SET {column} = %s
+            WHERE id = %s
+            RETURNING is_objective;
+        """
+        params = (
+            status, url_id
+        )
+        things = execute_insert(query, params)
+        logger.debug(f'URL {url_id} updated with error. {things}')
+    except Exception as e:
+        logger.error(f"Error updating URL {url_id} with error: {e}")

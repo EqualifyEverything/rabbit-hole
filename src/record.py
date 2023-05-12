@@ -3,13 +3,14 @@ from utils.auth import catch_rabbits
 import json
 import threading
 from utils.process.axe import process_axe
-from utils.process.crawler import process_crawler
+from utils.process.crawler import process_crawler, process_crawler_geese
 from utils.process.errors import process_crawl_errors, process_axe_errors, process_uppies_errors
 
 # queues_to_check = ["landing_axe", "landing_crawler", "landing_uppies"]
 queue_processors = {
     "landing_crawler": process_crawler,
-    "landing_axe": process_axe
+    "landing_axe": process_axe,
+    "landing_crawler_goose": process_crawler_geese
     # "landing_uppies": process_uppies,
     # "error_crawler": process_crawl_errors
     # "error_axe": process_axe_errors
