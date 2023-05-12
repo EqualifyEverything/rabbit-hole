@@ -37,9 +37,9 @@ def process_crawler(channel, method, properties, body):
 
 # Handle Gooseegg Results
 def process_crawler_geese(channel, method, properties, body):
-    logger.debug('Processing Crawler message...')
+    logger.debug('Processing Crawler Goose egg')
     data = json.loads(body)
-    url_id = data['url_id']
+    url_id = data['source_url_id']
     logger.debug(f'Beginning to mark {url_id} as errored...')
     # Update targets.urls with active_crawler false
     column = 'active_crawler'
