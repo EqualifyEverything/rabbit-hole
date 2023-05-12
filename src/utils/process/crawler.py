@@ -46,6 +46,8 @@ def process_crawler_geese(channel, method, properties, body):
     status = 'false'
     update_url(url_id, column, status)
     logger.debug(f'{url_id} marked as active_crawler FALSE')
+    channel.basic_ack(delivery_tag=method.delivery_tag)
+    logger.debug('Crawler Goose Egg message acknowledged')
 
 
 # Update the url active_ column in targets.urls
@@ -63,6 +65,6 @@ def update_url(url_id, column, status):
             status, url_id
         )
         things = execute_insert(query, params)
-        logger.debug(f'URL {url_id} updated with error. {things}')
+        logger.debug(f'URL {url_id} updated. Is Objective =  {things}')
     except Exception as e:
         logger.error(f"Error updating URL {url_id} with error: {e}")
