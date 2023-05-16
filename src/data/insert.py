@@ -180,7 +180,7 @@ def insert_tables_rules(scan_id, tables_rules):
 
 def create_crawl(
         url_id, urls_found
-    ):
+        ):
         query = """
             INSERT INTO results.crawl (
                 url_id, urls_found
@@ -236,3 +236,49 @@ def record_error(queue, url_id, error_message):
     params = (url_id, error_message, queue)
     execute_insert(query, params, expect_result=False)
     logger.debug(f'Recorded Error from {queue}')
+
+
+# Insert Uppies Results
+def record_uppies(url_id, data):
+    query = """
+        INSERT INTO results.scan_uppies (
+            url_id,
+            status_code,
+            content_type,
+            response_time,
+            charset,
+            page_last_modified,
+            content_length,
+            server,
+            x_powered_by,
+            x_content_type_options,
+            x_frame_options,
+            x_xss_protection,
+            content_security_policy,
+            strict_transport_security,
+            etag
+        ) VALUES (
+            %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
+        )
+    """
+    # Prepare the data for insert
+    params = (
+        url_id,
+        data.get('status_code'),
+        data.get('content_type'),
+        data.get('response_time'),
+        data.get('charset'),
+        data.get('page_last_modified'),
+        data.get('content_length'),
+        data.get('server'),
+        data.get('x_powered_by'),
+        data.get('x_content_type_options'),
+        data.get('x_frame_options'),
+        data.get('x_xss_protection'),
+        data.get('content_security_policy'),
+        data.get('strict_transport_security'),
+        data.get('etag'),
+    )
+    execute_insert(query, params, expect_result=False)
+    logger.debug(f'Uppies record inserted for URL ID: {url_id}')
+
