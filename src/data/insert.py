@@ -263,15 +263,21 @@ def record_uppies(url_id, data):
     """
     # Prepare the data for insert
     page_last_modified = data.get('page_last_modified') or None
+    content_length = data.get('content_length')
+    if content_length == '':
+        content_length = None
+    status_code = data.get('status_code')
+    if not status_code:
+        status_code = 997
 
     params = (
         url_id,
-        data.get('status_code'),
+        status_code,
         data.get('content_type'),
         data.get('response_time'),
         data.get('charset'),
         page_last_modified,
-        data.get('content_length'),
+        content_length,
         data.get('server'),
         data.get('x_powered_by'),
         data.get('x_content_type_options'),
