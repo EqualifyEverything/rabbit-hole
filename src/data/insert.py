@@ -262,13 +262,15 @@ def record_uppies(url_id, data):
         )
     """
     # Prepare the data for insert
+    page_last_modified = data.get('page_last_modified') or None
+
     params = (
         url_id,
         data.get('status_code'),
         data.get('content_type'),
         data.get('response_time'),
         data.get('charset'),
-        data.get('page_last_modified'),
+        page_last_modified,
         data.get('content_length'),
         data.get('server'),
         data.get('x_powered_by'),
@@ -281,4 +283,5 @@ def record_uppies(url_id, data):
     )
     execute_insert(query, params, expect_result=False)
     logger.debug(f'Uppies record inserted for URL ID: {url_id}')
+
 
