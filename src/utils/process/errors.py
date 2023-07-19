@@ -3,52 +3,76 @@ from data.insert import record_error, execute_insert
 import json
 
 
-def process_errors(channel, method, properties, body, queue, column, status):
+# Handle Crawl Errors
+def process_crawl_errors(channel, method, properties, body):
+    logger.debug('Processing Crawler Error Queue')
     try:
-        logger.debug(f'Processing {queue} error')
-        message = json.loads(body)
+        # Deserialize the message
+        data = json.loads(body)
 
-        # Get Error Details from message
-        url_id = message['url_id']
-        error_message = message['error_message']
+        # Get the data from the queue
+        queue = 'error_crawler'
+        url_id = data['url_id']
+        error_message = data['error_message']
 
-        logger.debug(f'Logging error for {url_id}...')
-        # Record the Error
         record_error(queue, url_id, error_message)
-        # Mark url as errored
-        update_url(url_id, column, status)
-        logger.debug(f'✅ Recorded error for {url_id}...')
+        logger.info(f'Error Logged:\nURL ID: {url_id}\nQueue: {queue}')
+
     except Exception as e:
         logger.error(f"Error processing {queue} error: {e}")
 
-
-# Specific Queue Error Handlers
-    """
-    The first variable is the queue name,
-    the second is the column in targets.urls to update,
-    and the third is the status to set for that column in targets.urls.
-    """
-
-
-# Handle Crawl Errors
-def process_crawl_errors(channel, method, properties, body):
-    process_errors(
-        channel, method, properties, body,
-        'error_crawler', 'active_crawler', 'false')
+    finally:
+        channel.basic_ack(delivery_tag=method.delivery_tag)
+        logger.debug('Crawl Error Acknowledged')
 
 
 # Handle Uppies Errors
 def process_uppies_errors(channel, method, properties, body):
-    process_errors(
-        channel, method, properties, body,
-        'error_uppies', 'active_scan_uppies', 'false')
+    logger.debug('Processing Uppies Error Queue')
+    try:
+        # Deserialize the message
+        data = json.loads(body)
+
+        # Get the data from the queue
+        queue = 'error_uppies'
+        url_id = data['url_id']
+        error_message = data['error_message']
+
+        record_error(queue, url_id, error_message)
+        logger.info(f'Error Logged:\nURL ID: {url_id}\nQueue: {queue}')
+
+    except Exception as e:
+        logger.error(f"Error processing {queue} error: {e}")
+
+    finally:
+        channel.basic_ack(delivery_tag=method.delivery_tag)
+        logger.debug('Uppies Error Acknowledged')
 
 
 # Handle Axe Errors
 def process_axe_errors(channel, method, properties, body):
-    process_errors(
-        channel, method, properties, body,
-        'error_axe', 'active_scan_axe', 'false')
+    logger.debug('Processing Axe Error Queue')
+    try:
+        # Deserialize the message
+        data = json.loads(body)
+
+        # Get the data from the queue
+        queue = 'error_axe'
+        url_id = data['url_id']
+        error_message = data['error_message']
+
+        record_error(queue, url_id, error_message)
+        logger.info(f'Error Logged:\nURL ID: {url_id}\nQueue: {queue}')
+
+    except Exception as e:
+        logger.error(f"Error processing {queue} error: {e}")
+
+    finally:
+        channel.basic_ack(delivery_tag=method.delivery_tag)
+        logger.debug('Axe Error Acknowledged')
+
+
+
 
 
 # Update the url active_ column in targets.urls
