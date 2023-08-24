@@ -1,3 +1,4 @@
+
 # A11yRabbit Hole
 [![🏗️📤 Build and publish 🐳 images](https://github.com/EqualifyApp/rabbit-hole/actions/workflows/containerize.yml/badge.svg)](https://github.com/EqualifyApp/rabbit-hole/actions/workflows/containerize.yml)
 
@@ -62,3 +63,7 @@ Welcome to the database guardian! This file specifies the connection class that 
 This repo is under the GPL-3.0 License. In a nutshell, this means you're free to use, modify, and distribute this software as long as you follow the requirements specified in the LICENSE file. You can find it here: [LICENSE](LICENSE)
 
 ## Happy exploring the A11yRabbit Hole! 🕳️🐇🎉
+
+# rabbit-hole
+Where the data hops in from RabbitMQ and burrows into the database, deep down the rabbit hole 🐰🕳️.
+
