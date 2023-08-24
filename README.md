@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # A11yRabbit Hole
 [![🏗️📤 Build and publish 🐳 images](https://github.com/EqualifyApp/rabbit-hole/actions/workflows/containerize.yml/badge.svg)](https://github.com/EqualifyApp/rabbit-hole/actions/workflows/containerize.yml)
@@ -67,3 +68,7 @@ This repo is under the GPL-3.0 License. In a nutshell, this means you're free to
 # rabbit-hole
 Where the data hops in from RabbitMQ and burrows into the database, deep down the rabbit hole 🐰🕳️.
 
+=======
+# rabbit-hole
+Where the data hops in from RabbitMQ and burrows into the database, deep down the rabbit hole 🐰🕳️.
+>>>>>>> 11a3f75 (Initial commit)
